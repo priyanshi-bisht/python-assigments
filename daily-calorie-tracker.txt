@@ -1,0 +1,36 @@
+Name=PRIYANSHI BISHT
+#roll no.=2501010216
+#Project title=Daily Calorie Tracker(CLI)
+print("welcome to the CLI this will help you to track your daily calorie intake.This is designed to help mentain your health and overall fitness by monitoring your calorie consumption.")
+# Add food intake: add the food items you consume and their calorie value.
+# display total meals consumed in a day.
+meals =[] # this is the list which will store meals names
+calorie = [] #this is the list which will store calorie value
+num_meals = int (input("Enter the number of meals you consumed today: "))
+for i in range(num_meals):
+  meal = input(f"Enter meal {i+1} name: ")
+  calories_consumed = int(input(f"Enter calories for {meal}: "))
+  meals.append(meal)
+  calorie.append(calories_consumed)
+  # total intake of calories according to all the meals
+  total_calorie =sum(calorie)
+  avg_calorie = total_calorie/ len(calorie)
+  limit = int(input("Enter your daily calorie limit: ")) #enter the calorie limit according to your health
+  print("----------------------------------------------")
+  if total_calorie > limit:
+    print("warning: you have exceeded your daily calorie limit")
+  else:
+    print("great job you are within your daily calorie limit")
+  print("------------------------------------------------")
+  # the output in tabular formate
+  print("============= daily calorie report =============")
+  print("meal name\tcalories")
+  print("-----------------------------------------------")
+  for i in range(len(meals)):
+    print(f"{meals[i]}\t\t{calorie[i]}")
+  print("-----------------------------------------------")
+  print(f"total:\t\t{total_calorie}")
+  print(f"average:\t{avg_calorie}")
+  print("===============================================")
+  print("hopefully this tracker helped you in maintaining your calorie intake ")
+  print("thanku for using it.")
