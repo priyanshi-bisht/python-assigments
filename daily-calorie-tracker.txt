@@ -13,15 +13,15 @@ for i in range(num_meals):
   meals.append(meal)
   calorie.append(calories_consumed)
   # total intake of calories according to all the meals
-  total_calorie =sum(calorie)
-  avg_calorie = total_calorie/ len(calorie)
-  limit = int(input("Enter your daily calorie limit: ")) #enter the calorie limit according to your health
-  print("----------------------------------------------")
-  if total_calorie > limit:
-    print("warning: you have exceeded your daily calorie limit")
-  else:
-    print("great job you are within your daily calorie limit")
-  print("------------------------------------------------")
+ total_calorie =sum(calorie)
+ avg_calorie = total_calorie/ len(calorie)
+ limit = int(input("Enter your daily calorie limit: ")) #enter the calorie limit according to your health
+ print("----------------------------------------------")
+ if total_calorie > limit:
+   print("warning: you have exceeded your daily calorie limit")
+ else:
+   print("great job you are within your daily calorie limit")
+ print("------------------------------------------------")
   # the output in tabular formate
   print("============= daily calorie report =============")
   print("meal name\tcalories")
